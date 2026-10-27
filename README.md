@@ -58,3 +58,7 @@ test/chat.test.js   integration tests: broadcast, rooms, typing, validation, rat
 ## License
 
 MIT
+
+## Author
+
+Built by **David Lekopien** ([@Lekopien](https://github.com/Lekopien)) · [lekopien.com](https://lekopien.com)
