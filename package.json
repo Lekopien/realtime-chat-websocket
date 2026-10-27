@@ -1,0 +1,17 @@
+{
+  "name": "realtime-chat-websocket",
+  "version": "1.0.0",
+  "description": "Real-time multi-room chat over WebSockets with presence, typing indicators and history.",
+  "type": "module",
+  "scripts": {
+    "start": "node src/server.js",
+    "test": "node --test"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "ws": "^8.22.0"
+  }
+}

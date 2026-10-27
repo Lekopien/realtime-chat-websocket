@@ -1,0 +1,40 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Realtime Chat · Lekopien</title>
+  <meta name="description" content="Multi-room real-time chat over WebSockets with presence, typing indicators and history.">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header class="top">
+    <a class="brand" href="https://lekopien.com">lekopien<span>.</span>chat</a>
+    <span id="mode" class="mode"></span>
+    <a class="gh" href="https://github.com/Lekopien/realtime-chat-websocket">GitHub</a>
+  </header>
+
+  <form id="join" class="join card">
+    <h1>Real-time chat</h1>
+    <p>WebSockets, rooms, presence and typing indicators. Open this page in two tabs to chat with yourself.</p>
+    <label>Your name <input id="name" required minlength="2" maxlength="20" autocomplete="nickname"></label>
+    <label>Room <input id="room" value="lobby" pattern="[a-z0-9-]{1,24}" required></label>
+    <button class="btn">Join</button>
+    <p id="joinError" class="error" role="alert"></p>
+  </form>
+
+  <main id="chat" class="chat" hidden>
+    <aside class="card">
+      <h2 id="roomTitle"></h2>
+      <h3>Online</h3>
+      <ul id="users"></ul>
+    </aside>
+    <section class="card convo">
+      <ol id="log" aria-live="polite"></ol>
+      <p id="typing" class="typing"></p>
+      <form id="say" class="say"><input id="text" maxlength="500" autocomplete="off" placeholder="Message" aria-label="Message"><button class="btn">Send</button></form>
+    </section>
+  </main>
+  <script type="module" src="app.js"></script>
+</body>
+</html>
